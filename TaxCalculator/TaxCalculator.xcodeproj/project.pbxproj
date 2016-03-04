@@ -12,6 +12,7 @@
 		D086B0DE1C8926BD0098FA84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D086B0DC1C8926BD0098FA84 /* Main.storyboard */; };
 		D086B0E01C8926BD0098FA84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D086B0DF1C8926BD0098FA84 /* Assets.xcassets */; };
 		D086B0E31C8926BD0098FA84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D086B0E11C8926BD0098FA84 /* LaunchScreen.storyboard */; };
+		D086B0ED1C896DF20098FA84 /* TaxItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086B0EC1C896DF20098FA84 /* TaxItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		D086B0DF1C8926BD0098FA84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D086B0E21C8926BD0098FA84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D086B0E41C8926BD0098FA84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D086B0EA1C8929BF0098FA84 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D086B0EC1C896DF20098FA84 /* TaxItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +57,10 @@
 		D086B0D71C8926BD0098FA84 /* TaxCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				D086B0EA1C8929BF0098FA84 /* README.md */,
 				D086B0D81C8926BD0098FA84 /* AppDelegate.swift */,
 				D086B0DA1C8926BD0098FA84 /* ViewController.swift */,
+				D086B0EC1C896DF20098FA84 /* TaxItemView.swift */,
 				D086B0DC1C8926BD0098FA84 /* Main.storyboard */,
 				D086B0DF1C8926BD0098FA84 /* Assets.xcassets */,
 				D086B0E11C8926BD0098FA84 /* LaunchScreen.storyboard */,
@@ -136,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D086B0DB1C8926BD0098FA84 /* ViewController.swift in Sources */,
+				D086B0ED1C896DF20098FA84 /* TaxItemView.swift in Sources */,
 				D086B0D91C8926BD0098FA84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +290,7 @@
 				D086B0E91C8926BD0098FA84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
