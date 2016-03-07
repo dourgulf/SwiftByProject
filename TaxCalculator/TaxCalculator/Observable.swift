@@ -12,15 +12,15 @@ public class ObservableType<T> {
     public typealias WillSetSubscriberType = (newValue: T) -> Void
     public typealias DidSetSubscriberType = (oldValue: T, newValue: T) -> Void
     
-    private var willSetWatcher: WillSetSubscriberType?
-    private var didSetWatcher: DidSetSubscriberType?
+    private var willSetWatcher: [WillSetSubscriberType] = []
+    private var didSetWatcher: [DidSetSubscriberType] = []
     
     private var rawValue: T {
         willSet {
-            willSetWatcher?(newValue: newValue)
+            willSetWatcher.forEach{ $0(newValue: newValue) }
         }
         didSet {
-            didSetWatcher?(oldValue: oldValue, newValue: self.rawValue)
+            didSetWatcher.forEach { $0(oldValue: oldValue, newValue: self.rawValue) }
         }
     }
     
@@ -34,10 +34,10 @@ public class ObservableType<T> {
         #endif
     }
     public func subscribeWillSet(watcher: (newValue: T) -> Void) {
-        self.willSetWatcher = watcher
+        self.willSetWatcher.append(watcher)
     }
     public func subscribeDidSet(watcher: DidSetSubscriberType) {
-        self.didSetWatcher = watcher
+        self.didSetWatcher.append(watcher)
     }
     
     // Oooooops: deprecated! unhappy!!

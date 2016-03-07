@@ -32,26 +32,31 @@ class ViewController2: UIViewController {
     func setupViews() {
         let tap = UITapGestureRecognizer(target: self, action: "onViewTapped:")
         self.view.addGestureRecognizer(tap)
-        TaxRateConfig.income <-- TaxRateConfig.SavedIncome
-        let income = TaxRateConfig.income&
-        if income > 0.0 {
-            self.incomeInput.text = NSNumberFormatter().stringFromNumber(income)
-        }
+        
         endowmentView.typeName = "养老"
         medicalView.typeName = "医疗"
         unemploymentView.typeName = "失业"
         injuryView.typeName = "工伤"
         bearView.typeName = "生育"
         fundView.typeName = "公积金"
-        self.allViews = [endowmentView, medicalView, unemploymentView, injuryView, bearView, fundView]
         
+        self.allViews = [endowmentView, medicalView, unemploymentView, injuryView, bearView, fundView]
         self.allViews.forEach { $0.watchIncomeChangedEvent() }
+        TaxRateConfig.income <-- TaxRateConfig.SavedIncome
+        
+        let income = TaxRateConfig.income&
+        if income > 0.0 {
+            self.incomeInput.text = NSNumberFormatter().stringFromNumber(income)
+        }
     }
     func onViewTapped(sender: AnyObject?) {
+        self.incomeInput.resignFirstResponder()
         self.allViews.forEach { $0.closeKeyboard() }
     }
     
     @IBAction func doCalc(sender: AnyObject) {
+        onViewTapped(sender)
+        
         let income = self.incomeInput.text!
         guard !income.isEmpty else {
             return
