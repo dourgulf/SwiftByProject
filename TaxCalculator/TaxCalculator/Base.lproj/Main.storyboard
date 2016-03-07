@@ -45,49 +45,27 @@
                                 </variation>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-Tn-CUg" userLabel="InputContainer">
-                                <rect key="frame" x="92" y="70" width="428" height="36"/>
+                                <rect key="frame" x="92" y="70" width="426" height="36"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YpG-uj-9a9" userLabel="Income">
-                                        <rect key="frame" x="0.0" y="6" width="140" height="30"/>
+                                        <rect key="frame" x="0.0" y="6" width="211" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="广州" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEN-kC-Bfw" userLabel="Area">
-                                        <rect key="frame" x="144" y="6" width="140" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="个税" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhJ-4J-Vrk" userLabel="TaxItem">
-                                        <rect key="frame" x="288" y="6" width="140" height="30"/>
+                                        <rect key="frame" x="215" y="6" width="211" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="YpG-uj-9a9" secondAttribute="bottom" id="1on-j6-SyB"/>
-                                    <constraint firstItem="xhJ-4J-Vrk" firstAttribute="leading" secondItem="dEN-kC-Bfw" secondAttribute="trailing" constant="4" id="62m-sF-Hw1"/>
-                                    <constraint firstItem="xhJ-4J-Vrk" firstAttribute="height" secondItem="dEN-kC-Bfw" secondAttribute="height" id="BGD-0A-41b"/>
-                                    <constraint firstItem="xhJ-4J-Vrk" firstAttribute="width" secondItem="dEN-kC-Bfw" secondAttribute="width" id="C5t-vd-cfU"/>
-                                    <constraint firstAttribute="trailing" secondItem="xhJ-4J-Vrk" secondAttribute="trailing" id="IGG-sQ-zCb"/>
                                     <constraint firstItem="dEN-kC-Bfw" firstAttribute="width" secondItem="YpG-uj-9a9" secondAttribute="width" id="MLe-o7-Abz"/>
-                                    <constraint firstItem="xhJ-4J-Vrk" firstAttribute="width" secondItem="YpG-uj-9a9" secondAttribute="width" id="Rgb-sK-Zey"/>
                                     <constraint firstItem="YpG-uj-9a9" firstAttribute="leading" secondItem="bHg-Tn-CUg" secondAttribute="leading" id="blq-qi-j87"/>
                                     <constraint firstItem="dEN-kC-Bfw" firstAttribute="centerY" secondItem="YpG-uj-9a9" secondAttribute="centerY" id="dAl-Bz-fHK"/>
-                                    <constraint firstItem="xhJ-4J-Vrk" firstAttribute="centerY" secondItem="dEN-kC-Bfw" secondAttribute="centerY" id="lcl-bW-wyQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="xhJ-4J-Vrk" secondAttribute="bottom" id="o3V-78-Ubg"/>
+                                    <constraint firstAttribute="trailing" secondItem="dEN-kC-Bfw" secondAttribute="trailing" id="nuI-wB-UjJ"/>
                                     <constraint firstItem="dEN-kC-Bfw" firstAttribute="leading" secondItem="YpG-uj-9a9" secondAttribute="trailing" constant="4" id="sQa-0N-LsA"/>
-                                    <constraint firstItem="xhJ-4J-Vrk" firstAttribute="leading" secondItem="dEN-kC-Bfw" secondAttribute="trailing" constant="45" id="tKg-pe-scO"/>
-                                    <constraint firstAttribute="bottom" secondItem="dEN-kC-Bfw" secondAttribute="bottom" id="tQV-YY-lyd"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="tQV-YY-lyd"/>
-                                        <exclude reference="BGD-0A-41b"/>
-                                        <exclude reference="C5t-vd-cfU"/>
-                                        <exclude reference="o3V-78-Ubg"/>
-                                        <exclude reference="tKg-pe-scO"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWr-50-oKo" userLabel="TaxItemContainer">
                                 <rect key="frame" x="20" y="114" width="560" height="466"/>
@@ -281,7 +259,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Ddk-CN-ugB" firstAttribute="height" secondItem="Z8a-b0-XIe" secondAttribute="height" id="1xN-4S-HmN"/>
                                     <constraint firstItem="CTZ-SK-0ES" firstAttribute="height" secondItem="OOh-Yz-gyV" secondAttribute="height" id="27T-Yk-pBC"/>
@@ -374,7 +351,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PJs-s3-hNO" firstAttribute="leading" secondItem="bHg-Tn-CUg" secondAttribute="trailing" id="67V-6m-jvY"/>
+                            <constraint firstItem="PJs-s3-hNO" firstAttribute="leading" secondItem="bHg-Tn-CUg" secondAttribute="trailing" constant="2" id="67V-6m-jvY"/>
                             <constraint firstItem="bHg-Tn-CUg" firstAttribute="bottom" secondItem="uOo-dP-EN9" secondAttribute="bottom" id="6ZG-Pa-e7w"/>
                             <constraint firstAttribute="bottom" secondItem="dWr-50-oKo" secondAttribute="bottom" constant="20" symbolic="YES" id="6tj-nO-g9f"/>
                             <constraint firstItem="uOo-dP-EN9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7ld-ae-I5L"/>

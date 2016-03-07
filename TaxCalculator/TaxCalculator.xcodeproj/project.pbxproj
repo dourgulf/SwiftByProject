@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01CABAD1C8D14CD00301AF5 /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01CABAB1C8D14CD00301AF5 /* Main2.storyboard */; };
+		D01CABAF1C8D179B00301AF5 /* TaxRateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01CABAE1C8D179B00301AF5 /* TaxRateConfig.swift */; };
+		D01CABB11C8D2BCC00301AF5 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01CABB01C8D2BCC00301AF5 /* ViewController2.swift */; };
+		D01CABB31C8D61F200301AF5 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01CABB21C8D61F200301AF5 /* Observable.swift */; };
 		D086B0D91C8926BD0098FA84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086B0D81C8926BD0098FA84 /* AppDelegate.swift */; };
 		D086B0DB1C8926BD0098FA84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086B0DA1C8926BD0098FA84 /* ViewController.swift */; };
 		D086B0DE1C8926BD0098FA84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D086B0DC1C8926BD0098FA84 /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D01CABAC1C8D14CD00301AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
+		D01CABAE1C8D179B00301AF5 /* TaxRateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxRateConfig.swift; sourceTree = "<group>"; };
+		D01CABB01C8D2BCC00301AF5 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		D01CABB21C8D61F200301AF5 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		D086B0D51C8926BD0098FA84 /* TaxCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D086B0D81C8926BD0098FA84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D086B0DA1C8926BD0098FA84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,12 +67,16 @@
 			children = (
 				D086B0EA1C8929BF0098FA84 /* README.md */,
 				D086B0D81C8926BD0098FA84 /* AppDelegate.swift */,
-				D086B0DA1C8926BD0098FA84 /* ViewController.swift */,
+				D01CABAB1C8D14CD00301AF5 /* Main2.storyboard */,
+				D01CABB01C8D2BCC00301AF5 /* ViewController2.swift */,
 				D086B0EC1C896DF20098FA84 /* TaxItemView.swift */,
+				D01CABAE1C8D179B00301AF5 /* TaxRateConfig.swift */,
 				D086B0DC1C8926BD0098FA84 /* Main.storyboard */,
+				D086B0DA1C8926BD0098FA84 /* ViewController.swift */,
 				D086B0DF1C8926BD0098FA84 /* Assets.xcassets */,
 				D086B0E11C8926BD0098FA84 /* LaunchScreen.storyboard */,
 				D086B0E41C8926BD0098FA84 /* Info.plist */,
+				D01CABB21C8D61F200301AF5 /* Observable.swift */,
 			);
 			path = TaxCalculator;
 			sourceTree = "<group>";
@@ -129,6 +141,7 @@
 			files = (
 				D086B0E31C8926BD0098FA84 /* LaunchScreen.storyboard in Resources */,
 				D086B0E01C8926BD0098FA84 /* Assets.xcassets in Resources */,
+				D01CABAD1C8D14CD00301AF5 /* Main2.storyboard in Resources */,
 				D086B0DE1C8926BD0098FA84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,8 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01CABB11C8D2BCC00301AF5 /* ViewController2.swift in Sources */,
 				D086B0DB1C8926BD0098FA84 /* ViewController.swift in Sources */,
+				D01CABAF1C8D179B00301AF5 /* TaxRateConfig.swift in Sources */,
 				D086B0ED1C896DF20098FA84 /* TaxItemView.swift in Sources */,
+				D01CABB31C8D61F200301AF5 /* Observable.swift in Sources */,
 				D086B0D91C8926BD0098FA84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +165,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D01CABAB1C8D14CD00301AF5 /* Main2.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D01CABAC1C8D14CD00301AF5 /* Base */,
+			);
+			name = Main2.storyboard;
+			sourceTree = "<group>";
+		};
 		D086B0DC1C8926BD0098FA84 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -254,7 +278,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TaxCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = tv.inhand.TaxCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -265,7 +291,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TaxCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = tv.inhand.TaxCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDefaultTaxRate()
+//        setupDefaultTaxRate()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,20 +42,20 @@ class ViewController: UIViewController {
     let selfSavedKey = "SelfTaxRate"
     let defaultCompanyTaxRate = ["养老": 0.14, "医疗": 0.08, "失业": 0.012,  "工伤": 0.05, "生育": 0.0085, "公积金": 0.2]
     let companySavedKey = "CompanyTaxRate"
-    func setupDefaultTaxRate() {
-        let savedSelfTaxRate = (NSUserDefaults.standardUserDefaults().objectForKey(self.selfSavedKey) ?? defaultSelfTaxRate) as! [String : Double]
-        let selfViews = [endowmentSelfView, medicalSelfView, unemploymentSelfView, injurySelfView, bearSelfView, fundSelfView]
-        for view in selfViews {
-            let key: String = view.percentLabel.text!
-            view.taxPercent = savedSelfTaxRate[key]!
-        }
-        
-        let companyViews = [endowmentCompanyView, medicalCompanyView, unemploymentCompanyView, injuryCompanyView, bearCompanyView, fundCompanyView]
-        let savedCompanyTaxRate = (NSUserDefaults.standardUserDefaults().objectForKey(self.companySavedKey) ?? defaultCompanyTaxRate) as! [String : Double]
-        for view in companyViews {
-            let key: String = view.percentLabel.text!
-            view.taxPercent = savedCompanyTaxRate[key]!
-        }
-    }
+//    func setupDefaultTaxRate() {
+//        let savedSelfTaxRate = (NSUserDefaults.standardUserDefaults().objectForKey(self.selfSavedKey) ?? defaultSelfTaxRate) as! [String : Double]
+//        let selfViews = [endowmentSelfView, medicalSelfView, unemploymentSelfView, injurySelfView, bearSelfView, fundSelfView]
+//        for view in selfViews {
+//            let key: String = view.percentLabel.text!
+//            view.taxPercent = savedSelfTaxRate[key]!
+//        }
+//        
+//        let companyViews = [endowmentCompanyView, medicalCompanyView, unemploymentCompanyView, injuryCompanyView, bearCompanyView, fundCompanyView]
+//        let savedCompanyTaxRate = (NSUserDefaults.standardUserDefaults().objectForKey(self.companySavedKey) ?? defaultCompanyTaxRate) as! [String : Double]
+//        for view in companyViews {
+//            let key: String = view.percentLabel.text!
+//            view.taxPercent = savedCompanyTaxRate[key]!
+//        }
+//    }
 }
 
