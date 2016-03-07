@@ -17,20 +17,13 @@ class TaxRateConfig {
         return income
     }()
     
-//    static var SavedIncome: ObservableType<Double> {
-//        get {
-//            return ObservableType(SavedIncomeLazy)
-//        }
-//        set {
-//            SavedIncomeLazy = newValue&
-//            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: self.SavedIncomeKey)
-//            #if DEBUG
-//                NSUserDefaults.standardUserDefaults().synchronize()
-//            #endif
-//        }
-//    }
-    
     static var income: ObservableType<Double> = ObservableType(0.0)
+    static func saveIncome(value: Double) {
+        NSUserDefaults.standardUserDefaults().setObject(value, forKey: SavedIncomeKey)
+        #if DEBUG
+            NSUserDefaults.standardUserDefaults().synchronize()
+        #endif
+    }
     
     static private let SavedSelfKey = "SavedSelfKey"
     static let DefaultSelfTaxRate = ["养老": 8, "医疗": 2, "失业": 0.5,  "工伤": 0, "生育": 0, "公积金": 3]

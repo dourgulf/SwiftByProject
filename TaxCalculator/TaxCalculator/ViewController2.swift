@@ -43,6 +43,9 @@ class ViewController2: UIViewController {
         self.allViews = [endowmentView, medicalView, unemploymentView, injuryView, bearView, fundView]
         self.allViews.forEach { $0.watchIncomeChangedEvent() }
         TaxRateConfig.income <-- TaxRateConfig.SavedIncome
+        TaxRateConfig.income.subscribeDidSet { (_, newValue) -> Void in
+            TaxRateConfig.saveIncome(newValue)
+        }
         
         let income = TaxRateConfig.income&
         if income > 0.0 {
