@@ -2,22 +2,14 @@
 //  TaxItemView.swift
 //  TaxCalculator
 //
-//  Created by jinchu darwin on 16/3/4.
-//  Copyright © 2016年 JcLive. All rights reserved.
+//  Created by DarwinRie on 16/3/4.
+//  Copyright © 2016年 https://dawenhing.top. All rights reserved.
 //
 
 import UIKit
 
 //@IBDesignable
 public class TaxRateItemView: UIView, UITextFieldDelegate {
-//    var taxPercent: Double = 0.0 {
-//        didSet {
-//            let formater = NSNumberFormatter()
-//            formater.numberStyle = .DecimalStyle
-//            percentInput.text = formater.stringFromNumber(taxPercent)
-//            self.updateResultLabel()
-//        }
-//    }
     var percentInput: UITextField!
     var percentLabel: UILabel!
     var resultLabel: UILabel!
@@ -70,17 +62,28 @@ public class TaxRateItemView: UIView, UITextFieldDelegate {
         self.resultLabel.center.y = centery
     }
     
+    // TODO: define a data model for view
+    var taxRate: Double {
+        let formater = NSNumberFormatter()
+        formater.numberStyle = .DecimalStyle
+        return formater.numberFromString(self.percentInput.text!) as! Double
+    }
+    
+    var tax: Int {
+        return Int(TaxRateConfig.income& * self.taxRate / 100.0)
+    }
+    
+    var taxRateChanged: ObservableType<Double> = ObservableType(0)
+    
+    public func updateResultLabel() {
+        // 取整!
+        self.resultLabel.text = "\(self.tax)"
+    }
+
     // MARK: text field delegate
     public func textFieldDidEndEditing(textField: UITextField) {
         self.updateResultLabel()
-    }
-    
-    func updateResultLabel() {
-        let formater = NSNumberFormatter()
-        formater.numberStyle = .DecimalStyle
-        // 取整!
-        let tax = formater.numberFromString(self.percentInput.text!) as! Double
-        self.resultLabel.text = formater.stringFromNumber(Int(TaxRateConfig.income& * tax / 100.0))
+        self.taxRateChanged <-- self.taxRate
     }
 }
 
@@ -88,12 +91,21 @@ public class TaxItemView: UIView {
     var typeName: String? {
         didSet {
             self.typeNameLabel.text = self.typeName
+            
             let formater = NSNumberFormatter()
             formater.numberStyle = .DecimalStyle
             
-            self.selfRateView.percentInput.text = formater.stringFromNumber(TaxRateConfig.selfRateForType(self.typeName!))
-            self.companyRateView.percentInput.text = formater.stringFromNumber(TaxRateConfig.companyRateForType(self.typeName!))
+            self.selfRateView.percentInput.text = formater.stringFromNumber(TaxRateConfig.SelfRateForType(self.typeName!))
+            self.companyRateView.percentInput.text = formater.stringFromNumber(TaxRateConfig.CompanyRateForType(self.typeName!))
         }
+    }
+    
+    var selfTaxRate: Double {
+        return self.selfRateView.taxRate
+    }
+    
+    var companyTaxRate: Double {
+        return self.companyRateView.taxRate
     }
     
     var typeNameLabel: UILabel!
@@ -104,11 +116,17 @@ public class TaxItemView: UIView {
         typeNameLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
 
         self.addSubview(typeNameLabel)
-        selfRateView = TaxRateItemView()
-
-        self.addSubview(selfRateView)
-        companyRateView = TaxRateItemView()
-        self.addSubview(companyRateView)
+        self.selfRateView = TaxRateItemView()
+        self.selfRateView.taxRateChanged.subscribeDidSet { (oldValue, newValue) -> Void in
+            TaxRateConfig.SaveSelfRateForType(self.typeName!, rate: self.selfTaxRate)
+        }
+        self.addSubview(self.selfRateView)
+        
+        self.companyRateView = TaxRateItemView()
+        self.companyRateView.taxRateChanged.subscribeDidSet { (oldValue, newValue) -> Void in
+            TaxRateConfig.SaveCompanyRateForType(self.typeName!, rate: self.companyTaxRate)
+        }
+        self.addSubview(self.companyRateView)
     }
     
     public override init(frame: CGRect) {

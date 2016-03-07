@@ -76,7 +76,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医疗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOh-Yz-gyV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="医疗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOh-Yz-gyV">
                                         <rect key="frame" x="8" y="95" width="60" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="KBX-qi-cU3"/>
@@ -91,7 +91,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="失业" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0f-P5-5aZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="失业" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0f-P5-5aZ">
                                         <rect key="frame" x="8" y="124" width="60" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="XUR-ho-ydg"/>
@@ -106,7 +106,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生育" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djb-9u-w1k">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="生育" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djb-9u-w1k">
                                         <rect key="frame" x="8" y="182" width="60" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="bji-aH-YUj"/>
@@ -121,7 +121,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公积金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSK-uM-LVa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="公积金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSK-uM-LVa">
                                         <rect key="frame" x="8" y="211" width="60" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="6T2-ve-bp3"/>
@@ -136,7 +136,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="养老" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks2-3V-C2u">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="养老" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks2-3V-C2u">
                                         <rect key="frame" x="8" y="66" width="60" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="bkH-e1-WPR"/>
@@ -151,7 +151,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="工伤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wt1-uQ-0aw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="工伤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wt1-uQ-0aw">
                                         <rect key="frame" x="8" y="153" width="60" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="AU8-IW-3w9"/>
@@ -166,51 +166,51 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8a-b0-XIe" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8a-b0-XIe" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="71" y="209" width="241" height="26"/>
                                         <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="wtX-H3-ry1"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-CN-ugB" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-CN-ugB" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="312" y="209" width="240" height="26"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dfe-uj-S9I" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dfe-uj-S9I" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="71" y="180" width="241" height="26"/>
                                         <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="J5a-Hc-DL8"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoF-7P-PPX" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DoF-7P-PPX" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="312" y="180" width="240" height="26"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-0G-kwg" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-0G-kwg" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="71" y="151" width="241" height="26"/>
                                         <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="JhT-ta-atn"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-ef-DJq" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-ef-DJq" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="312" y="151" width="240" height="26"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ql4-YT-zNZ" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ql4-YT-zNZ" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="71" y="122" width="241" height="26"/>
                                         <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="u56-pJ-knk"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSV-nx-ast" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSV-nx-ast" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="312" y="122" width="240" height="26"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVI-KL-cOH" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVI-KL-cOH" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="71" y="64" width="241" height="26"/>
                                         <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -225,18 +225,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgE-Lg-0gm" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KgE-Lg-0gm" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="312" y="64" width="240" height="26"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTZ-SK-0ES" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CTZ-SK-0ES" userLabel="SelfContainer" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="71" y="93" width="241" height="26"/>
                                         <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="bH8-UB-Cea"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAf-ll-RSl" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAf-ll-RSl" userLabel="Company" customClass="TaxItemView" customModule="TaxCalculator" customModuleProvider="target">
                                         <rect key="frame" x="312" y="93" width="240" height="26"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>

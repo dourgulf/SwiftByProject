@@ -2,8 +2,8 @@
 //  TaxRateConfig.swift
 //  TaxCalculator
 //
-//  Created by jinchu darwin on 16/3/7.
-//  Copyright © 2016年 JcLive. All rights reserved.
+//  Created by DarwinRie on 16/3/7.
+//  Copyright © 2016年 https://dawenhing.top. All rights reserved.
 //
 
 import Foundation
@@ -41,7 +41,7 @@ class TaxRateConfig {
         return NSUserDefaults.standardUserDefaults().objectForKey(SavedCompanyKey)
     }()
 
-    class func selfRateForType(name: String) -> Double {
+    class func SelfRateForType(name: String) -> Double {
         if let savedRate = self.SavedSelfTaxRate as? [String: Double] {
             print("\(savedRate)")
             // if it has saved config, but not contain our key, use default.
@@ -50,12 +50,36 @@ class TaxRateConfig {
         return DefaultSelfTaxRate[name] ?? 0.0
     }
     
-    class func companyRateForType(name: String) -> Double {
+    class func SaveSelfRateForType(name: String, rate: Double) {
+        var savedRate = self.SavedSelfTaxRate as? [String: Double]
+        if savedRate == nil {
+            savedRate = [String: Double]()
+        }
+        savedRate![name] = rate
+        NSUserDefaults.standardUserDefaults().setObject(savedRate, forKey: SavedSelfKey)
+        #if DEBUG
+            NSUserDefaults.standardUserDefaults().synchronize()
+        #endif
+    }
+    
+    class func CompanyRateForType(name: String) -> Double {
         if let savedRate = self.SavedCompanyTaxRate as? [String: Double] {
             print("\(savedRate)")
             // if it has saved config, but not contain our key, use default.
             return savedRate[name] ?? (DefaultSelfTaxRate[name] ?? 0.0)
         }
         return DefaultCompanyTaxRate[name] ?? 0.0
+    }
+    
+    class func SaveCompanyRateForType(name: String, rate: Double) {
+        var savedRate = self.SavedCompanyTaxRate as? [String: Double]
+        if savedRate == nil {
+            savedRate = [String: Double]()
+        }
+        savedRate![name] = rate
+        NSUserDefaults.standardUserDefaults().setObject(savedRate, forKey: SavedCompanyKey)
+        #if DEBUG
+            NSUserDefaults.standardUserDefaults().synchronize()
+        #endif
     }
 }

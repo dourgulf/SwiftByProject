@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  TaxCalculator
 //
-//  Created by jinchu darwin on 16/3/4.
-//  Copyright © 2016年 JcLive. All rights reserved.
+//  Created by DarwinRie on 16/3/4.
+//  Copyright © 2016年 https://dawenhing.top. All rights reserved.
 //
 
 import UIKit
