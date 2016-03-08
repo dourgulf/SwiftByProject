@@ -2,14 +2,26 @@
 //  TaxItemView.swift
 //  TaxCalculator
 //
-//  Created by DarwinRie on 16/3/4.
-//  Copyright © 2016年 https://dawenhing.top. All rights reserved.
+//  Created by DarwenRie on 16/3/4.
+//  Copyright © 2016年 DarwenRie. All rights reserved.
 //
 
 import UIKit
 
 //@IBDesignable
-public class TaxRateItemView: UIView, UITextFieldDelegate {
+class TaxRateItemView: UIView, UITextFieldDelegate {
+    var taxRateItem: TaxRateItem! {
+        didSet {
+            let formater = NSNumberFormatter()
+            formater.numberStyle = .DecimalStyle
+            self.percentInput.text = formater.stringFromNumber(self.taxRateItem.taxRate)
+            self.updateResultLabel()
+            self.taxRateItem.income.subscribeDidSet { (oldValue, newValue) -> Void in
+                self.updateResultLabel()
+            }
+        }
+    }
+
     var percentInput: UITextField!
     var percentLabel: UILabel!
     var resultLabel: UILabel!
@@ -29,22 +41,21 @@ public class TaxRateItemView: UIView, UITextFieldDelegate {
         self.addSubview(resultLabel)
     }
     
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupSubviews()
     }
     
-    public convenience init() {
+    convenience init() {
         self.init(frame: CGRect.zero)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupSubviews()
     }
     
-    public override func layoutSubviews() {
-//        print("\(String(self.dynamicType)) layoutSubviews")
+    override func layoutSubviews() {
         let size = self.bounds.size
         let centery = size.height/2
         
@@ -62,88 +73,74 @@ public class TaxRateItemView: UIView, UITextFieldDelegate {
         self.resultLabel.center.y = centery
     }
     
-    // TODO: define a data model for view
-    var taxRate: Double {
+//    var taxRate: Double {
+//        let formater = NSNumberFormatter()
+//        formater.numberStyle = .DecimalStyle
+//        return formater.numberFromString(self.percentInput.text!) as! Double
+//    }
+//
+//    var tax: Int {
+//        return Int(self.taxRateItem.income& * self.taxRate / 100.0)
+//    }
+//
+//    var taxRateChanged: ObservableType<Double> = ObservableType(0)
+    
+    func updateResultLabel() {
         let formater = NSNumberFormatter()
         formater.numberStyle = .DecimalStyle
-        return formater.numberFromString(self.percentInput.text!) as! Double
+        self.resultLabel.text = formater.stringFromNumber(self.taxRateItem.tax)
     }
-    
-    var tax: Int {
-        return Int(TaxRateConfig.income& * self.taxRate / 100.0)
-    }
-    
-    var taxRateChanged: ObservableType<Double> = ObservableType(0)
-    
-    public func updateResultLabel() {
-        // 取整!
-        self.resultLabel.text = "\(self.tax)"
-    }
-
+//
     // MARK: text field delegate
-    public func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(textField: UITextField) {
         self.updateResultLabel()
-        self.taxRateChanged <-- self.taxRate
+//        self.taxRateItem.taxRate = self.taxRate
     }
 }
-
-public class TaxItemView: UIView {
-    var typeName: String? {
-        didSet {
-            self.typeNameLabel.text = self.typeName
-            
-            let formater = NSNumberFormatter()
-            formater.numberStyle = .DecimalStyle
-            
-            self.selfRateView.percentInput.text = formater.stringFromNumber(TaxRateConfig.SelfRateForType(self.typeName!))
-            self.companyRateView.percentInput.text = formater.stringFromNumber(TaxRateConfig.CompanyRateForType(self.typeName!))
-        }
+class TaxItemView: UIView {
+    var taxModel: TaxModel!
+    func setupModel(model: TaxModel, type: TaxRateType) {
+        self.taxModel = model
+        self.personalRateView.taxRateItem = model.getTaxRateItem(type, category: .Personal)
+        self.companyRateView.taxRateItem = model.getTaxRateItem(type, category: .Company)
+        self.typeNameLabel.text = type.labelText
     }
-    
-    var selfTaxRate: Double {
-        return self.selfRateView.taxRate
-    }
-    
-    var companyTaxRate: Double {
-        return self.companyRateView.taxRate
-    }
-    
     var typeNameLabel: UILabel!
-    var selfRateView: TaxRateItemView!
+    var personalRateView: TaxRateItemView!
     var companyRateView: TaxRateItemView!
     func setupSubviews() {
         typeNameLabel = UILabel()
         typeNameLabel.font = UIFont.systemFontOfSize(UIFont.smallSystemFontSize())
 
         self.addSubview(typeNameLabel)
-        self.selfRateView = TaxRateItemView()
-        self.selfRateView.taxRateChanged.subscribeDidSet { (oldValue, newValue) -> Void in
-            TaxRateConfig.SaveSelfRateForType(self.typeName!, rate: self.selfTaxRate)
-        }
-        self.addSubview(self.selfRateView)
+        self.personalRateView = TaxRateItemView()
+//        self.selfRateView.taxRateChanged.subscribeDidSet { (oldValue, newValue) -> Void in
+//            TaxRateConfig.SaveSelfRateForType(self.typeName!, rate: self.selfTaxRate)
+//        }
+        self.addSubview(self.personalRateView)
         
         self.companyRateView = TaxRateItemView()
-        self.companyRateView.taxRateChanged.subscribeDidSet { (oldValue, newValue) -> Void in
-            TaxRateConfig.SaveCompanyRateForType(self.typeName!, rate: self.companyTaxRate)
-        }
+//        self.companyRateView.taxRateChanged.subscribeDidSet { (oldValue, newValue) -> Void in
+//            TaxRateConfig.SaveCompanyRateForType(self.typeName!, rate: self.companyTaxRate)
+//        }
         self.addSubview(self.companyRateView)
     }
     
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupSubviews()
     }
     
-    public convenience init() {
+    convenience init() {
         self.init(frame: CGRect.zero)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupSubviews()
     }
     
-    public override func layoutSubviews() {
+    override func layoutSubviews() {
         // TODO: maybe move this code to other place
         let size = self.bounds
         self.typeNameLabel.frame = CGRect(x: 0, y: 0, width: 60, height: size.height)
@@ -151,22 +148,14 @@ public class TaxItemView: UIView {
         self.typeNameLabel.center.y = centery
         let xpos = self.typeNameLabel.bounds.width
         let width = (size.width - xpos) / 2
-        self.selfRateView.frame = CGRect(x: xpos, y: 0, width: width, height: size.height)
-        self.selfRateView.center.y = centery
+        self.personalRateView.frame = CGRect(x: xpos, y: 0, width: width, height: size.height)
+        self.personalRateView.center.y = centery
         self.companyRateView.frame = CGRect(x: xpos + width, y: 0, width: width, height: size.height)
         self.companyRateView.center.y = centery
     }
     
-    public func watchIncomeChangedEvent() {
-        TaxRateConfig.income.subscribeDidSet { (oldValue, newValue) -> Void in
-            print("SavedIncome change, update result")
-            self.selfRateView.updateResultLabel()
-            self.companyRateView.updateResultLabel()
-        }
-    }
-    
-    public func closeKeyboard() {
-        self.selfRateView.percentInput.resignFirstResponder()
+    func closeKeyboard() {
+        self.personalRateView.percentInput.resignFirstResponder()
         self.companyRateView.percentInput.resignFirstResponder()
     }
 }

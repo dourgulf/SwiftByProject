@@ -11,6 +11,7 @@
 		D01CABAD1C8D14CD00301AF5 /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01CABAB1C8D14CD00301AF5 /* Main2.storyboard */; };
 		D01CABAF1C8D179B00301AF5 /* TaxRateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01CABAE1C8D179B00301AF5 /* TaxRateConfig.swift */; };
 		D01CABB11C8D2BCC00301AF5 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01CABB01C8D2BCC00301AF5 /* ViewController2.swift */; };
+		D05301591C8E5E9900926896 /* TaxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05301581C8E5E9900926896 /* TaxModel.swift */; };
 		D086B0D91C8926BD0098FA84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086B0D81C8926BD0098FA84 /* AppDelegate.swift */; };
 		D086B0E01C8926BD0098FA84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D086B0DF1C8926BD0098FA84 /* Assets.xcassets */; };
 		D086B0E31C8926BD0098FA84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D086B0E11C8926BD0098FA84 /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 		D01CABAC1C8D14CD00301AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
 		D01CABAE1C8D179B00301AF5 /* TaxRateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxRateConfig.swift; sourceTree = "<group>"; };
 		D01CABB01C8D2BCC00301AF5 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		D05301581C8E5E9900926896 /* TaxModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxModel.swift; sourceTree = "<group>"; };
 		D086B0D51C8926BD0098FA84 /* TaxCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D086B0D81C8926BD0098FA84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D086B0DF1C8926BD0098FA84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				D086B0D81C8926BD0098FA84 /* AppDelegate.swift */,
 				D01CABAB1C8D14CD00301AF5 /* Main2.storyboard */,
 				D01CABB01C8D2BCC00301AF5 /* ViewController2.swift */,
+				D05301581C8E5E9900926896 /* TaxModel.swift */,
 				D086B0EC1C896DF20098FA84 /* TaxItemView.swift */,
 				D01CABAE1C8D179B00301AF5 /* TaxRateConfig.swift */,
 				D086B0DF1C8926BD0098FA84 /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 				D01CABB11C8D2BCC00301AF5 /* ViewController2.swift in Sources */,
 				D01CABAF1C8D179B00301AF5 /* TaxRateConfig.swift in Sources */,
 				D086B0ED1C896DF20098FA84 /* TaxItemView.swift in Sources */,
+				D05301591C8E5E9900926896 /* TaxModel.swift in Sources */,
 				0975920D1C8DC6C200335517 /* Observable.swift in Sources */,
 				D086B0D91C8926BD0098FA84 /* AppDelegate.swift in Sources */,
 			);

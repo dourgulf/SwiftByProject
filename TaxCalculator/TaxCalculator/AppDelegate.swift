@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  TaxCalculator
 //
-//  Created by DarwinRie on 16/3/4.
-//  Copyright © 2016年 https://dawenhing.top. All rights reserved.
+//  Created by DarwenRie on 16/3/4.
+//  Copyright © 2016年 DarwenRie. All rights reserved.
 //
 
 import UIKit

@@ -2,8 +2,8 @@
 //  Observable.swift
 //  TaxCalculator
 //
-//  Created by DarwinRie on 16/3/7.
-//  Copyright © 2016年 https://dawenhing.top. All rights reserved.
+//  Created by DarwenRie on 16/3/7.
+//  Copyright © 2016年 DarwenRie. All rights reserved.
 //
 
 import Foundation
@@ -33,6 +33,8 @@ public class ObservableType<T> {
             print("ObservableType deinit:\(rawValue)")
         #endif
     }
+    
+    // TODO: handle duplicated subscriber
     public func subscribeWillSet(watcher: (newValue: T) -> Void) {
         self.willSetWatcher.append(watcher)
     }
